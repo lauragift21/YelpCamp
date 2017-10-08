@@ -10,8 +10,8 @@ app.get("/", function(req, res){
 });
 
 app.get("/campgrounds", function(req, res){
-    
     var campgrounds = [
+        // arrays of different campgrounds and images
         {name: "SalmonCreek", image:"https://images.unsplash.com/photo-1487730116645-74489c95b41b?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},
         {name: "MountBriton", image:"https://images.unsplash.com/photo-1445308394109-4ec2920981b1?dpr=1&auto=compress,format&fit=crop&w=753&h=&q=80&cs=tinysrgb&crop="},
         {name: "AgbejuleRock", image:"https://images.unsplash.com/photo-1470246973918-29a93221c455?dpr=1&auto=compress,format&fit=crop&w=334&h=&q=80&cs=tinysrgb&crop="},
@@ -20,6 +20,13 @@ app.get("/campgrounds", function(req, res){
     ]
     res.render("campgrounds", {campgrounds: campgrounds});
     
+});
+
+app.post("/campgrounds", function(req, res){
+    // get data from the form and add it to the campground array
+
+    // redirect back to campground
+
 });
 
 app.listen("3000", function(req, res){
