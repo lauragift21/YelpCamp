@@ -6,6 +6,15 @@ var app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.set("view engine", "ejs");
 
+var campgrounds = [
+    // arrays of different campgrounds and images
+    {name: "SalmonCreek", image:"https://images.unsplash.com/photo-1487730116645-74489c95b41b?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},
+    {name: "MountBriton", image:"https://images.unsplash.com/photo-1445308394109-4ec2920981b1?dpr=1&auto=compress,format&fit=crop&w=753&h=&q=80&cs=tinysrgb&crop="},
+    {name: "AgbejuleRock", image:"https://images.unsplash.com/photo-1470246973918-29a93221c455?dpr=1&auto=compress,format&fit=crop&w=334&h=&q=80&cs=tinysrgb&crop="},
+    {name: "IyanuMasheke", image:"https://images.unsplash.com/photo-1504851149312-7a075b496cc7?dpr=1&auto=compress,format&fit=crop&w=349&h=&q=80&cs=tinysrgb&crop="},
+    {name: "LaunrynHill", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="}      
+]
+
 //Route for landing page
 app.get("/", function(req, res){
     res.render("landing");
@@ -26,11 +35,21 @@ app.get("/campgrounds", function(req, res){
 
 app.post("/campgrounds", function(req, res){
     // get data from the form and add it to the campground array
-
+    var name = req.body.name;
+    var image = req.body.image;
+    var newCampground = {name:name, image:image}
+    campgrounds.push(newCampground);
     // redirect back to campground
-    res.send("Post Route");
+    res.redirect("/campgrounds");
+
 
 });
+
+app.get("/campgrounds/new", function(req, res){
+    res.render("new");
+
+});
+
 
 app.listen("3000", function(req, res){
     console.log("Yelpcamp Server is running!!");
