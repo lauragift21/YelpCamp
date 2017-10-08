@@ -1,7 +1,9 @@
 var express = require("express");
+var bodyParser = require("body-parser");
 
 var app = express()
 
+app.use(bodyParser.urlencoded({ extended: false }))
 app.set("view engine", "ejs");
 
 //Route for landing page
@@ -26,6 +28,7 @@ app.post("/campgrounds", function(req, res){
     // get data from the form and add it to the campground array
 
     // redirect back to campground
+    res.send("Post Route");
 
 });
 
