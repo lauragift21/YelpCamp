@@ -8,11 +8,14 @@ app.set("view engine", "ejs");
 
 var campgrounds = [
     // arrays of different campgrounds and images
-    {name: "MountBriton", image:"https://images.unsplash.com/photo-1445308394109-4ec2920981b1?dpr=1&auto=compress,format&fit=crop&w=753&h=&q=80&cs=tinysrgb&crop="},
-    {name: "SalmonCreek", image:"https://images.unsplash.com/photo-1487730116645-74489c95b41b?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},
-    {name: "oifyefofwrg", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},    
-    {name: "Launrwrgrgg", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},     
-    {name: "Lauwggrgq", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="}      
+    {name:"MountBriton", image:"https://images.unsplash.com/photo-1445308394109-4ec2920981b1?dpr=1&auto=compress,format&fit=crop&w=753&h=&q=80&cs=tinysrgb&crop="},
+    {name:"SalmonCreek", image:"https://images.unsplash.com/photo-1487730116645-74489c95b41b?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},
+    {name:"oifyefofwrg", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},    
+    {name:"oifyefofwrg", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},    
+    {name:"Launrwrgrgg", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},     
+    {name:"Launrwrgrgg", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},     
+    {name:"Launrwrgrgg", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="},     
+    {name:"Lauwggrgq", image:"https://images.unsplash.com/photo-1455763916899-e8b50eca9967?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="}      
 ]
 
 //Route for landing page
